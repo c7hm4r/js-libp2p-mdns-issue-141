@@ -1,0 +1,25 @@
+{
+  "name": "js-libp2p-mdns-issue-141",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/c7hm4r/js-libp2p-mdns-issue-141.git",
+  "author": "Christoph Müller <pmzqxfmn@runbox.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./index.js",
+    "demo": "npm run build && concurrently -n A,B npm:start npm:start"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-noise": "^8.0.2",
+    "@libp2p/mdns": "^3.0.1",
+    "@libp2p/websockets": "^3.0.4",
+    "libp2p": "^0.39.5"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "typescript": "^4.8.4"
+  }
+}
